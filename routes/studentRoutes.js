@@ -3,6 +3,8 @@ const {
   getStudents,
   getStudentByid,
   createStudent,
+  updateStudent,
+  deleteStudent,
 } = require("../controllers/studentControllers");
 
 // router object
@@ -18,5 +20,11 @@ router.get("/get/:id", getStudentByid);
 
 // Create Student || POST
 router.post("/create", createStudent);
+
+// Update Student || PUT
+router.put("/update/:id",updateStudent)
+
+// Delete
+router.delete("/delete/:id",deleteStudent)
 
 module.exports = router;
